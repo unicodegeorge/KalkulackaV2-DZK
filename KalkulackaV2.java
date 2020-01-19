@@ -64,50 +64,34 @@ public class KalkulackaV2 {
                 case '+':
 
                     tempResult = numbers[0] + numbers[1];
-                    currentOperator = selectedBtn;
-                    stringNum = "" + tempResult + "" + currentOperator;
-                    numbers[0] = tempResult;
-
-                    currentNumPos = 1;
-                    number = "";
-                    run();
+                   
+                  
 
                     break;
 
                 case '-':
 
                     tempResult = numbers[0] - numbers[1];
-                    currentOperator = selectedBtn;
-                    stringNum = "" + tempResult + "" + currentOperator;
-                    numbers[0] = tempResult;
+                   
 
-                    currentNumPos = 1;
-                    number = "";
-                    run();
+                   
                     break;
 
                 case '*':
 
                     tempResult = numbers[0] * numbers[1];
-                    currentOperator = selectedBtn;
-                    stringNum = "" + tempResult + "" + currentOperator;
-                    numbers[0] = tempResult;
+                    
 
-                    currentNumPos = 1;
-                    number = "";
-                    run();
+                   
                     break;
 
                 case '/':
 
                     tempResult = numbers[0] / numbers[1];
-                    currentOperator = selectedBtn;
-                    stringNum = "" + tempResult + "" + currentOperator;
-                    numbers[0] = tempResult;
+                    
 
-                    currentNumPos = 1;
-                    number = "";
-                    run();
+                   
+                  
                     break;
 
                 default:
@@ -116,6 +100,12 @@ public class KalkulackaV2 {
 
                 }
 
+                    currentOperator = selectedBtn;
+                    stringNum = "" + tempResult + "" + currentOperator;
+                    numbers[0] = tempResult;
+                    currentNumPos = 1;
+                    number = "";
+                    run();
             }
         }
 
