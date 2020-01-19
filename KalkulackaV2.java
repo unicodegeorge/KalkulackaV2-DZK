@@ -63,7 +63,6 @@ public class KalkulackaV2 {
 
                 case '+':
 
-                  
                     tempResult = numbers[0] + numbers[1];
                     currentOperator = selectedBtn;
                     stringNum = "" + tempResult + "" + currentOperator;
@@ -76,7 +75,7 @@ public class KalkulackaV2 {
                     break;
 
                 case '-':
-                   
+
                     tempResult = numbers[0] - numbers[1];
                     currentOperator = selectedBtn;
                     stringNum = "" + tempResult + "" + currentOperator;
@@ -88,8 +87,7 @@ public class KalkulackaV2 {
                     break;
 
                 case '*':
-                
-               
+
                     tempResult = numbers[0] * numbers[1];
                     currentOperator = selectedBtn;
                     stringNum = "" + tempResult + "" + currentOperator;
@@ -101,8 +99,7 @@ public class KalkulackaV2 {
                     break;
 
                 case '/':
-                   
-                 
+
                     tempResult = numbers[0] / numbers[1];
                     currentOperator = selectedBtn;
                     stringNum = "" + tempResult + "" + currentOperator;
@@ -139,7 +136,7 @@ public class KalkulackaV2 {
 
                 break;
 
-                case '-':
+            case '-':
 
                 result = numbers[0] - numbers[1];
 
@@ -152,7 +149,7 @@ public class KalkulackaV2 {
 
                 break;
 
-                case '/':
+            case '/':
 
                 result = numbers[0] / numbers[1];
 
@@ -164,8 +161,8 @@ public class KalkulackaV2 {
                 run();
 
                 break;
-                
-                case '*':
+
+            case '*':
 
                 result = numbers[0] * numbers[1];
 
