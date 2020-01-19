@@ -44,129 +44,64 @@ public class KalkulackaV2 {
         char selectedBtn = sc.nextLine().charAt(0);
         if (Character.isDigit(selectedBtn)) {
             number = number + "" + selectedBtn;
-
             addNumToString(selectedBtn);
-
         } else if (selectedBtn == '+' || selectedBtn == '-' || selectedBtn == '*' || selectedBtn == '/') {
             numbers[currentNumPos] = Integer.parseInt(number);
             if (numbers[1] == 0) {
-
                 number = "";
                 System.out.println("number na pozici " + currentNumPos + " je " + numbers[currentNumPos]);
                 currentOperator = selectedBtn;
                 currentNumPos++;
                 addNumToString(selectedBtn);
-
             } else {
-
                 switch (currentOperator) {
-
                 case '+':
-
                     tempResult = numbers[0] + numbers[1];
-                   
-                  
-
                     break;
-
                 case '-':
-
                     tempResult = numbers[0] - numbers[1];
-                   
-
-                   
                     break;
-
                 case '*':
-
                     tempResult = numbers[0] * numbers[1];
-                    
-
-                   
                     break;
-
                 case '/':
-
                     tempResult = numbers[0] / numbers[1];
-                    
-
-                   
-                  
                     break;
-
                 default:
 
                     break;
 
                 }
-
-                    currentOperator = selectedBtn;
-                    stringNum = "" + tempResult + "" + currentOperator;
-                    numbers[0] = tempResult;
-                    currentNumPos = 1;
-                    number = "";
-                    run();
+                currentOperator = selectedBtn;
+                stringNum = "" + tempResult + "" + currentOperator;
+                numbers[0] = tempResult;
+                currentNumPos = 1;
+                number = "";
+                run();
             }
-        }
-
-        else if (selectedBtn == '=') {
+        } else if (selectedBtn == '=') {
             numbers[1] = Integer.parseInt(number);
             System.out.println(numbers[0] + " " + numbers[1]);
             switch (currentOperator) {
             case '+':
-
                 result = numbers[0] + numbers[1];
-
-                stringNum = "";
-                number = "";
-
-                numbers[0] = 0;
-                numbers[1] = 1;
-                run();
-
                 break;
-
             case '-':
-
                 result = numbers[0] - numbers[1];
-
-                stringNum = "";
-                number = "";
-
-                numbers[0] = 0;
-                numbers[1] = 1;
                 run();
-
                 break;
-
             case '/':
-
                 result = numbers[0] / numbers[1];
-
-                stringNum = "";
-                number = "";
-
-                numbers[0] = 0;
-                numbers[1] = 1;
-                run();
-
                 break;
-
             case '*':
-
                 result = numbers[0] * numbers[1];
-
-                stringNum = "";
-                number = "";
-
-                numbers[0] = 0;
-                numbers[1] = 1;
-                run();
-
                 break;
-
             }
+            stringNum = "";
+            number = "";
+            numbers[0] = 0;
+            numbers[1] = 1;
+            run();
         }
-
     }
 }
